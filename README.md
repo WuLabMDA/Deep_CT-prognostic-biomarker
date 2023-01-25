@@ -20,3 +20,6 @@ Python, R, and Matlab were the platforms used for development. Sub-network 1 to 
 **Results**  
 
 ![image](https://user-images.githubusercontent.com/77283272/214708813-bcb25e6b-62e8-4e6b-950d-a29fdec72646.png)
+
+**Code Structure and Explanation**  
+
