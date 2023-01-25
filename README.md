@@ -16,3 +16,7 @@ Each sub-network was trained on NVIDIA A100 40GB/slot GPU unit, independently.
 
 **Software requirements**  
 Python, R, and Matlab were the platforms used for development. Sub-network 1 to 3 utilized Pytorch libraries (open source PyTorch v.1.4.0). Sub-network 4 mainly utilized R libraries (R 3.6.1). 
+
+**Results**  
+
+![image](https://user-images.githubusercontent.com/77283272/214708813-bcb25e6b-62e8-4e6b-950d-a29fdec72646.png)
