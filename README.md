@@ -8,7 +8,7 @@ The goal is to develop a deep learning-powered prognostic framework applied to b
 Please find the work in details here https://authors.elsevier.com/sd/article/S2589-7500(23)00082-1
 
 **Data preparation**  
-Deep-CT requires baseline CT from three different contrast as input; (1) lung window, (2) mediastinal window, and (3) The original/raw one. Figure below shows overall pipeline for data preparation. Note that, the final size of input down sampled to 128x128x128. 
+Deep-CT requires baseline CT from three different contrast as input; (1) lung window, (2) mediastinal window, and (3) The original/raw one. Figure below shows overall pipeline for data preparation. Note that, the final size of input was down sampled to 128x128x128. 
 
 ![image](https://user-images.githubusercontent.com/77283272/214706511-6b2f1c80-cee7-4513-8ad7-2773e11263bc.png)
 
@@ -23,4 +23,8 @@ Python, R, and Matlab were the platforms used for development. Sub-network 1 to 
 ![image](https://github.com/WuLabMDA/Deep_CT-prognostic-biomarker/assets/77283272/7248d967-af48-466a-9e9b-20900f8b63cb)
 
 **Code Structure and Explanation**  
+1. Codes are uploaded in terms of the sub-components of Deep-CT (sub-network1 to sub-network4 foldeers),and how the individual sub-componet was later ensembled as Deep-CT.
+2. We are unable to provide the raw data due to privacy concerns, however we did include dummy data in an effort to demonstrate how the codes run.
+3. Please run each sub-networks independently to get their respective independent hazard-risk. You will have four risks in total correspoding to four sub-network.
+4. Once you have the final four sub-network risks, please combined them into one spreadsheet (four columns) and feed it codes in Deep-CT folder.
 
