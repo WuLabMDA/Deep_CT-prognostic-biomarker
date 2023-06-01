@@ -25,6 +25,6 @@ Python, R, and Matlab were the platforms used for development. Sub-network 1 to 
 **Code Structure and Explanation**  
 1. Codes are uploaded in terms of the sub-components of Deep-CT (sub-network1 to sub-network4 foldeers),and how the individual sub-componet was later ensembled as Deep-CT.
 2. We are unable to provide the raw data due to privacy concerns, however we did include dummy data in an effort to demonstrate how the codes run.
-3. Please run each sub-networks independently to get their respective independent hazard-risk. You will have four risks in total correspoding to four sub-network.
-4. Once you have the final four sub-network risks, please combined them into one spreadsheet (four columns) and feed it codes in Deep-CT folder.
+3. Please run each sub-networks independently to get their respective independent risk (subgroups). You will have four risks in total correspoding to four sub-network.
+4. Once you have the final four sub-network ouput, please combined them into one spreadsheet (four columns) and feed it codes in Deep-CT folder. The ensemble of the four sub-networks is done via Random Survival Forest.
 
