@@ -19,8 +19,9 @@ Each sub-network was trained on NVIDIA A100 40GB/slot GPU unit, independently.
 Python, R, and Matlab were the platforms used for development. Sub-network 1 to 3 utilized Pytorch libraries (open source PyTorch v.1.4.0). Sub-network 4 mainly utilized R libraries (R 3.6.1). 
 
 **Results**  
+![Results](https://github.com/WuLabMDA/Deep_CT-prognostic-biomarker/assets/77283272/2b8a69b1-b736-4705-ba66-761c7efb0144)
 
-![image](https://github.com/WuLabMDA/Deep_CT-prognostic-biomarker/assets/77283272/7248d967-af48-466a-9e9b-20900f8b63cb)
+
 
 **Code Structure and Explanation**  
 1. Codes are uploaded in terms of the sub-components of Deep-CT (sub-network1 to sub-network4 foldeers),and how the individual sub-componet was later ensembled as Deep-CT.
