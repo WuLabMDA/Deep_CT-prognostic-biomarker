@@ -222,25 +222,10 @@ Scores are relative risk scores, not calibrated probabilities.
   doi     = {10.1016/S2589-7500(23)00082-1}
 }
 
-@misc{deepct_weights,
-  title  = {Deep-CT pretrained weights},
-  author = {[Authors]},
-  year   = {[year]},
-  doi    = {10.5281/zenodo.24447497}
-}
-
-@misc{deepct_example_data,
-  title  = {Deep-CT example input data},
-  author = {[Authors]},
-  year   = {[year]},
-  doi    = {10.5281/zenodo.24447797}
-}
 ```
 
 ## License
 
 Code: BSD-3-Clause (see `LICENSE`). Weights and example data: see the license on each Zenodo record.
 
-## Contact
 
-[Name, email] — Wu Lab, The University of Texas MD Anderson Cancer Center
