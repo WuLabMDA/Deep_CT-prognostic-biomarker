@@ -1,0 +1,13 @@
+# Tested with Python 3.9.23 and torch 2.7.1
+# Install PyTorch first (see README), then: pip install -r requirements.txt
+monai==1.5.2
+nibabel==5.3.3
+numpy==2.0.2
+pandas==2.3.1
+scipy==1.13.1
+scikit-image==0.24.0
+scikit-learn==1.5.2
+scikit-survival==0.23.1
+PyYAML==6.0.2
+openpyxl==3.1.5
+joblib==1.5.2

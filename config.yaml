@@ -1,0 +1,46 @@
+# =====================================================================
+# Deep-CT configuration — the only file a user needs to edit.
+#
+# Relative paths are resolved from the folder this config file is in,
+# so keep config.yaml in the package folder (e.g. ...\Packaging\).
+# Absolute paths also work. On Windows, use forward slashes or quotes:
+#   data_root: "C:/Users/me/Deep-CT_Deployment/Packaging/Mayo_3D"
+# =====================================================================
+
+paths:
+  data_root: Hugo_data/Hugo_3D          # folder holding the three window folders
+  weights_dir: Weights        # folder holding all .pth / .pt weight files
+  output_dir: Results         # created if it does not exist
+  dca_dir: DCA_parameters     # Sub2 inner-fusion DCA files (level_0_LM.npz ...)
+
+inputs:
+  # Option A: three folders (relative to data_root), files matched by identical name
+  original_dir: original_window
+  mediastinal_dir: media_window
+  lung_dir: lung_window
+  pattern: "*.nii.gz"
+  # Option B: a CSV with columns ID, original, mediastinal, lung (overrides Option A)
+  manifest: null
+
+weights:                      # file names inside weights_dir
+  sub1_os:  sub1_multitask_10_29_model1_OS.pth
+  sub1_pfs: sub1_multitask_10_29_model1_PFS.pth
+  sub2:     sub2_skip_model_0.000.pt
+  sub3_os:  sub3_AE_multitask_11_1_model1-rep1_OS.pth
+  sub3_pfs: sub3_AE_multitask_11_1_model1-rep1_PFS.pth
+
+runtime:
+  device: auto                # auto | cpu | cuda | cuda:0
+  batch_size: 2
+
+outcomes:                     # optional — leave file as null to score without outcomes
+  file: Hugo_outcome.xlsx    # e.g. Hugo_outcomes.xlsx (relative to this config's folder)
+  cohort: null                # e.g. Hugo, if the file holds several cohorts
+
+fusion:                       # final step (run_fusion.py): which subnets to combine, and how
+  subnets: [1, 2, 3]          # any combination of 1, 2, 3, 4  (4 = Sub4 subtype S1/S2)
+  heads: [cox_ph]             # one or more of:
+                              #   direct : mean, max, rank_average
+                              #   linear : cox_ph, ridge_cox, survival_svm
+                              #   trees  : rsf, gbs, extra_trees  (only for subsets the lab saved)
+                              # see all available combinations: python run_fusion.py --list

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Pretrained files: download from Zenodo (https://doi.org/10.5281/zenodo.24447497)
+Weights/
+DCA_parameters/
+*.pth
+*.pt
+*.joblib
+
+# Run outputs and generated inputs
+Results/
+Hugo_data/Hugo_3D/
+*_run_info.json
+preprocessing_log.csv
+
+# Never commit patient data or outcomes beyond the public example
+*.xlsx
+!Hugo_data/Hugo_outcome.xlsx
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.spyproject/
+.vscode/
